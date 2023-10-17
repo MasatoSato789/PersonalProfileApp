@@ -20,3 +20,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/phpinfo', function () {
+    phpinfo();
+});
+
+Route::get('/test', function () {
+    $test = "テスト";
+    $debug = "デバッグ";
+    $testOfDebug = "${debug}の${test}用です！！！";
+    return view('test');
+});
+
+Route::get('/login', [App\Http\Controllers\LoginController::class, 'index'])->name('login-index');
+
+Route::Post('/login', [App\Http\Controllers\LoginController::class, 'result'])->name('login-result');

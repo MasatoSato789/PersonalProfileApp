@@ -22,6 +22,9 @@ ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 RUN node --version
 RUN npm --version
 
+RUN pecl install xdebug && \
+    docker-php-ext-enable xdebug
+
 COPY ./php.ini /usr/local/etc/php/php.ini
 
 WORKDIR /data

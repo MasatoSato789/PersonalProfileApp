@@ -5,7 +5,8 @@
  */
 
 import './bootstrap';
-import { createApp } from 'vue';
+import { createApp, onMounted } from 'vue';
+import vueCounter from './vueCounter';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -37,3 +38,13 @@ app.component('example-component', ExampleComponent);
  */
 
 app.mount('#app');
+
+createApp({
+    setup() {
+        const { counter } = vueCounter();
+
+        return {
+            counter,
+        };
+    },
+}).mount("#counter");

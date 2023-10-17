@@ -5,3 +5,6 @@
 * サーバ：db
 * ユーザ：phper
 * パスワード：secret
+
+# phpinfo
+http://localhost:8080/phpinfo
