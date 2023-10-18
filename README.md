@@ -1,5 +1,12 @@
 # PersonalProfileApp
 
+# 起動方法
+$ cp .env.example .env
+$ docker compose up --build
+$ docker compose up -d
+$ docker compose exec app bash
+$ npm run dev
+
 # PypMyAdmin
 * http://localhost:3001/
 * サーバ：db
