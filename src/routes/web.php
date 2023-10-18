@@ -31,7 +31,3 @@ Route::get('/test', function () {
     $testOfDebug = "${debug}の${test}用です！！！";
     return view('test');
 });
-
-Route::get('/login', [App\Http\Controllers\LoginController::class, 'index'])->name('login-index');
-
-Route::Post('/login', [App\Http\Controllers\LoginController::class, 'result'])->name('login-result');
