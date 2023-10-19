@@ -1,10 +1,17 @@
 # PersonalProfileApp
 
 # 起動方法
-$ cp .env.example .env  
-$ docker compose up --build  
+$ cd "プロジェクトフォルダ"   * gitクローンしたフォルダ  
+$ make init  
+$ docker compose build  
 $ docker compose up -d  
-$ docker compose exec app bash  
+$ docker compose exec app composer install  
+$ docker compose exec app cp .env.example .env  
+$ docker compose exec app php artisan key:generate  
+$ docker compose exec app php artisan storage:link  
+$ docker compose exec app chmod -R 777 storage bootstrap/cache  
+$ docker compose exec app php artisan migrate:fresh  
+$ npm install      
 $ npm run dev  
 http://localhost:8080/  
 
