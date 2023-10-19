@@ -25,6 +25,8 @@ Route::get('/phpinfo', function () {
     phpinfo();
 });
 
+Route::get('/articles', [App\Http\Controllers\ArticleController::class, 'index'])->name('articles.index');
+
 Route::get('/test', function () {
     $test = "テスト";
     $debug = "デバッグ";
