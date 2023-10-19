@@ -6,6 +6,7 @@ $ docker compose up --build
 $ docker compose up -d
 $ docker compose exec app bash
 $ npm run dev
+http://localhost:8080/
 
 # PypMyAdmin
 * http://localhost:3001/
