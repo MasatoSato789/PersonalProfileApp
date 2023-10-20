@@ -26,6 +26,8 @@ Route::get('/phpinfo', function () {
 });
 
 Route::get('/articles', [App\Http\Controllers\ArticleController::class, 'index'])->name('articles.index');
+Route::get('/articles/create', [App\Http\Controllers\ArticleController::class, 'create'])->name('articles.create');
+Route::post('/articles', [App\Http\Controllers\ArticleController::class, 'store'])->name('articles.store');
 
 Route::get('/test', function () {
     $test = "テスト";

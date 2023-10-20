@@ -15,20 +15,28 @@ $ npm install
 $ npm run dev  
 http://localhost:8080/  
 
+# php 再コンパイル
+* Class xx not found 等のエラーの場合に使用する  
+$ docker compose exec app composer dump-autoload  
+
+# Laravel内部のviewのキャッシュクリア  
+* cssを修正しても反映されてない場合など  
+$ php artisan view:clear  
+
 # PypMyAdmin
-* http://localhost:3001/
-* サーバ：db
-* ユーザ：phper
-* パスワード：secret
+* http://localhost:3001/  
+* サーバ：db  
+* ユーザ：phper  
+* パスワード：secret  
 
 # phpinfo
 http://localhost:8080/phpinfo
 
 # smtp mail ※test用
-* アカウントID：masato789
-* test.aaa.789789789@gmail.com   PW：ZAQ!xsw2
-* 二段階認証プロセス　090-5496-4411
-* アプリパスワード：zaq!XSW2 →　xngxjzqrllzutoeg
+* アカウントID：masato789  
+* test.aaa.789789789@gmail.com   PW：ZAQ!xsw2  
+* 二段階認証プロセス　090-5496-4411  
+* アプリパスワード：zaq!XSW2 →　xngxjzqrllzutoeg  
 
 .envファイル  
 MAIL_MAILER=smtp  
