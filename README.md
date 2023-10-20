@@ -61,6 +61,6 @@ $ git checkout main # mainブランチへ移動
 $ git merge develop # developブランチをmainブランチに取り込む  
 $ git push origin main # developブランチの内容をmainへアップロード  
 
-* ブランチを新規に取得する場合
+* ブランチを新規に取得する場合  
 $ git fetch origin develop # ローカルにdevelopブランチがない場合  
 $ git checkout develop  
