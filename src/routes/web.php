@@ -28,6 +28,11 @@ Route::get('/phpinfo', function () {
 Route::get('/articles', [App\Http\Controllers\ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articles/create', [App\Http\Controllers\ArticleController::class, 'create'])->name('articles.create');
 Route::post('/articles', [App\Http\Controllers\ArticleController::class, 'store'])->name('articles.store');
+Route::get('/articles/{article}', [App\Http\Controllers\ArticleController::class, 'show'])->name('articles.show');
+Route::get('/articles/{article}/edit', [App\Http\Controllers\ArticleController::class, 'edit'])->name('articles.edit');
+Route::patch('/articles/{article}', [App\Http\Controllers\ArticleController::class, 'update'])->name('articles.update');
+Route::patch('/articles/{article}', [App\Http\Controllers\ArticleController::class, 'update'])->name('articles.update');
+Route::delete('/articles/{article}', [App\Http\Controllers\ArticleController::class, 'destroy'])->name('articles.destroy');
 
 Route::get('/test', function () {
     $test = "テスト";

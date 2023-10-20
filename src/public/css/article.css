@@ -54,6 +54,10 @@ ul.alert {
 dl.form-list {
     max-width: 600px;
 }
+.article-control {
+    display: flex;
+    justify-content: space-between;
+}
 footer {
     padding: 20px;
     text-align: center;
