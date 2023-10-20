@@ -23,6 +23,10 @@ $ docker compose exec app composer dump-autoload
 * cssを修正しても反映されてない場合など  
 $ php artisan view:clear  
 
+# DBへログイン
+$ docker compose exec db bash  
+$ mysql -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE  
+
 # PypMyAdmin
 * http://localhost:3001/  
 * サーバ：db  
